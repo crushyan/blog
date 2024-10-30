@@ -50,4 +50,40 @@
 <p>这就是特殊的机器数，1……..,1后面n-1个0（假设机器字长为n位）</p>
 ]]></content>
   </entry>
+  <entry>
+    <title>English</title>
+    <url>/2024/10/30/English/</url>
+    <content><![CDATA[<h2 id="Iansdbc"><a href="#Iansdbc" class="headerlink" title="Iansdbc"></a>Iansdbc</h2><p>English学习</p>
+]]></content>
+      <categories>
+        <category>hexo建站</category>
+        <category>hexo部署</category>
+        <category>github部署</category>
+        <category>个人博客</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>日常杂记</title>
+    <url>/2024/10/30/%E6%97%A5%E5%B8%B8%E6%9D%82%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="日常一事"><a href="#日常一事" class="headerlink" title="日常一事"></a>日常一事</h2>]]></content>
+      <tags>
+        <tag>日常杂记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C++系列</title>
+    <url>/2024/10/30/C++%E7%B3%BB%E5%88%97/</url>
+    <content><![CDATA[<h2 id="C-内存管理"><a href="#C-内存管理" class="headerlink" title="[C++内存管理]"></a>[C++内存管理]</h2>]]></content>
+      <categories>
+        <category>C++系列</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>内联汇编与宏</title>
+    <url>/2024/10/30/%E5%86%85%E8%81%94%E6%B1%87%E7%BC%96%E4%B8%8E%E5%AE%8F/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>内联汇编与宏</category>
+      </categories>
+  </entry>
 </search>
