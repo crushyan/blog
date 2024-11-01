@@ -21,27 +21,25 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="时钟里的补数现在指向6点，如果想到3点，逆时针拨动3格，顺时针拨动9格到，所以-3和9互为补数 补码的目的计算机里存储的是补码，为了让计算机里存储的数，加减法使用同一套电路，也就是补码加减器，做减法时，+负数的补码，就将减法转换为了加法 所以补码有符号位假设是8位补码系统，[00000000,01111111]是正数，[10000000,11111111]是负数根据负数求补码的公式：x是真值，x&amp;">
-<meta property="og:type" content="article">
-<meta property="og:title" content="补码之特殊的10000000">
-<meta property="og:url" content="http://example.com/2024/10/30/%E8%A1%A5%E7%A0%81%E4%B9%8B%E7%89%B9%E6%AE%8A%E7%9A%8410000000/index.html">
+    <meta name="description" content="love what you do currently">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kim的博客">
+<meta property="og:url" content="http://example.com/archives/page/2/index.html">
 <meta property="og:site_name" content="Kim的博客">
-<meta property="og:description" content="时钟里的补数现在指向6点，如果想到3点，逆时针拨动3格，顺时针拨动9格到，所以-3和9互为补数 补码的目的计算机里存储的是补码，为了让计算机里存储的数，加减法使用同一套电路，也就是补码加减器，做减法时，+负数的补码，就将减法转换为了加法 所以补码有符号位假设是8位补码系统，[00000000,01111111]是正数，[10000000,11111111]是负数根据负数求补码的公式：x是真值，x&amp;">
+<meta property="og:description" content="love what you do currently">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-30T03:37:57.000Z">
-<meta property="article:modified_time" content="2024-10-30T03:38:11.735Z">
 <meta property="article:author" content="yanxinlong">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/2024/10/30/%E8%A1%A5%E7%A0%81%E4%B9%8B%E7%89%B9%E6%AE%8A%E7%9A%8410000000/">
+<link rel="canonical" href="http://example.com/archives/page/2/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/10/30/%E8%A1%A5%E7%A0%81%E4%B9%8B%E7%89%B9%E6%AE%8A%E7%9A%8410000000/","path":"2024/10/30/补码之特殊的10000000/","title":"补码之特殊的10000000"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/page/2/index.html","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>补码之特殊的10000000 | Kim的博客</title>
+<title>归档 | Kim的博客</title>
   
 
 
@@ -74,7 +72,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <p class="site-title">Kim的博客</p>
+      <h1 class="site-title">Kim的博客</h1>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">他年我若为青帝，报与一处桃花开</p>
@@ -128,7 +126,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -141,7 +139,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%B6%E9%92%9F%E9%87%8C%E7%9A%84%E8%A1%A5%E6%95%B0"><span class="nav-number">1.</span> <span class="nav-text">时钟里的补数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A5%E7%A0%81%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="nav-number">2.</span> <span class="nav-text">补码的目的</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -191,98 +188,75 @@
 
     </div>
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner archive posts-collapse">
 
 
   
-
-
-<div class="post-block">
   
   
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <span class="collection-header">嗯..! 目前共计 12 篇日志。 继续努力。</span>
+      </div>
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/%E8%A1%A5%E7%A0%81%E4%B9%8B%E7%89%B9%E6%AE%8A%E7%9A%8410000000/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
-      <meta itemprop="name" content="yanxinlong">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Kim的博客">
-      <meta itemprop="description" content="love what you do currently">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="补码之特殊的10000000 | Kim的博客">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          补码之特殊的10000000
-        </h1>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
       
-
-      <time title="创建时间：2024-10-30 11:37:57 / 修改时间：11:38:11" itemprop="dateCreated datePublished" datetime="2024-10-30T11:37:57+08:00">2024-10-30</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody"><h2 id="时钟里的补数"><a href="#时钟里的补数" class="headerlink" title="时钟里的补数"></a>时钟里的补数</h2><p>现在指向6点，如果想到3点，逆时针拨动3格，顺时针拨动9格到，所以-3和9互为补数</p>
-<h2 id="补码的目的"><a href="#补码的目的" class="headerlink" title="补码的目的"></a>补码的目的</h2><p>计算机里存储的是补码，为了让计算机里存储的数，加减法使用同一套电路，也就是补码加减器，做减法时，+负数的补码，就将减法转换为了加法</p>
-<p>所以补码有符号位<br>假设是8位补码系统，[00000000,01111111]是正数，[10000000,11111111]是负数<br>根据负数求补码的公式：x是真值，x&lt;0, [x]补 &#x3D; 256+x &#x3D;&#x3D;&#x3D;&#x3D;&gt; x&#x3D;[x]补-256,得到了根据补码求真值的<strong>普遍方法</strong>(<strong>适用于任何补码</strong>):<br>[-1]补&#x3D;256+(-1)&#x3D;255&#x3D;11111111 ，-1 &#x3D;补码11111111-256<br>[-127]补&#x3D;256+(-127)&#x3D;129&#x3D;10000001，-127&#x3D;补码10000001-256</p>
-<p>特殊的-128来了<br>[-128]补&#x3D;256+(-128)&#x3D;128&#x3D;10000000 ,-128&#x3D;补码10000000-256,所以补码10000000的真值为-128</p>
-<p>已知补码求真值，<strong>一般方法</strong>可以是：补码-1求得反码，反码求原码，再求真值<br>补码11111111，反码11111110，原码10000001，真值-1<br>补码10000001，反码10000000，原码11111110，真值-127</p>
-<p>但是特殊的补码10000000呢？<br>补码10000000，反码01111111，原码10000000，真值-0 这个肯定是错误的，-0在计算机中以00000000的补码形式存储，与+0一样<br>其实这里开始就错了：<br>普遍方法中求得的真值永远是对的，所以补码为10000000&#x3D;&gt;符号位为1，所以是负数，所以按照公式[x]补 &#x3D; 256+x求真值x,x&#x3D;10000000-256&#x3D;-10000000&#x3D;-128<br>我们知道真值-128，不存在8位原码，8位反码，所以不能根据这种一般方法求</p>
-<p>所以为了不出错，我们需要记住10000000这个特殊的机器数，不存在原码，反码，所以补码求原码这种算法不存在</p>
-<p>这就是特殊的机器数，1……..,1后面n-1个0（假设机器字长为n位）</p>
-
+    <div class="collection-year">
+      <span class="collection-header">2024<span class="collection-year-count">11</span></span>
     </div>
 
-    
-    
-    
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2024-10-30T11:30:37+08:00"
+              content="2024-10-30">
+          10-30
+        </time>
+      </div>
 
-    <footer class="post-footer">
+      <div class="post-title">
+          <a class="post-title-link" href="/2024/10/30/1/" itemprop="url">
+            <span itemprop="name">1</span>
+          </a>
+      </div>
 
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2024/10/30/%E8%A1%A5%E7%A0%81%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/" rel="prev" title="补码公式推导">
-                  <i class="fa fa-angle-left"></i> 补码公式推导
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2024/10/30/English/" rel="next" title="English">
-                  English <i class="fa fa-angle-right"></i>
-                </a>
-            </div>
-          </div>
-    </footer>
+      
+    </header>
   </article>
-</div>
+    <div class="collection-year">
+      <span class="collection-header">2019<span class="collection-year-count">1</span></span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2019-01-29T22:58:56+08:00"
+              content="2019-01-29">
+          01-29
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2019/01/29/hello-world/" itemprop="url">
+            <span itemprop="name">利用GitHub和HEXO免费搭建个人博客高级 美化篇</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
 
 
-
-
-
+    </div>
+  </div>
+  
+  
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/archives/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </div>
   </main>
