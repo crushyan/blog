@@ -88,7 +88,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-question"><a href="/question/" rel="section"><i class="fa fa-question fa-fw"></i>question</a></li><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">13</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-question"><a href="/question/" rel="section"><i class="fa fa-question fa-fw"></i>question</a></li><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">22</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -153,13 +153,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">16</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -198,7 +198,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/1/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/01/%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8%E4%B8%8ELinux%E6%8C%87%E4%BB%A4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
@@ -216,7 +216,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2024/10/30/1/" class="post-title-link" itemprop="url">1</a>
+          <a href="/2024/11/01/%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8%E4%B8%8ELinux%E6%8C%87%E4%BB%A4/" class="post-title-link" itemprop="url">系统调用与Linux指令</a>
         </h2>
 
         <div class="post-meta-container">
@@ -228,7 +228,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2024-10-30 11:30:37 / 修改时间：11:35:44" itemprop="dateCreated datePublished" datetime="2024-10-30T11:30:37+08:00">2024-10-30</time>
+      <time title="创建时间：2024-11-01 16:45:38 / 修改时间：22:07:49" itemprop="dateCreated datePublished" datetime="2024-11-01T16:45:38+08:00">2024-11-01</time>
     </span>
 
   
@@ -241,7 +241,21 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="补码"><a href="#补码" class="headerlink" title="补码"></a>补码</h1>
+          <h2 id="question"><a href="#question" class="headerlink" title="question"></a>question</h2><h3 id="系统调用与函数调用的区别？"><a href="#系统调用与函数调用的区别？" class="headerlink" title="系统调用与函数调用的区别？"></a>系统调用与函数调用的区别？</h3><p>函数a调用函数b发生的跳转，在用户态里;<br>系统调用发生的跳转，是用户态到内核态，跳到内核态之后，该系统调用就可以使用计算机的”一切”资源,包括硬件，IO设备等</p>
+<h3 id="why-写OS比写普通应用程序软件更难？"><a href="#why-写OS比写普通应用程序软件更难？" class="headerlink" title="why 写OS比写普通应用程序软件更难？"></a>why 写OS比写普通应用程序软件更难？</h3><p>普通应用软件在OS上跑，OS直接在真实的硬件上跑，所以需要考虑硬件的设备，比如，写虚拟存储器机制，需要程序员了解机器的内存有多大,写寄存器保存返回值，需要程序员知道机器的寄存器存储多少位，比如80286及以前的处理器的寄存器都是16为，ax,到了386，eax,所以面对真实的硬件，需要有将真实硬件抽象的能力</p>
+<h3 id="高级编程语言可以直接使用系统调用吗？"><a href="#高级编程语言可以直接使用系统调用吗？" class="headerlink" title="高级编程语言可以直接使用系统调用吗？"></a>高级编程语言可以直接使用系统调用吗？</h3><p>可以，任何高级编程语言为了实现在所有的，各种各样，千奇百怪的OS上具有可移植性，将一同调用抽象为API函数，这就是C标准库和Linux系统调用的关系<br>比如，C语言中的fopen，是对Linux中的open系统调用的封装，在Linux中，C程序当然可以直接使用open，但是为了C语言在别的OS上也可以运行，我们必须<br>实现API,比如fopen就可以在大多数OS上跑，这就是为什么高级编程语言具有可移植性<br>插一句，<strong>open使用汇编程序实现的</strong></p>
+<h2 id="强大而又简单的shell"><a href="#强大而又简单的shell" class="headerlink" title="强大而又简单的shell"></a>强大而又简单的shell</h2><h3 id="shell的本质"><a href="#shell的本质" class="headerlink" title="shell的本质"></a>shell的本质</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line">myshell:</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;unistd.h&gt;</span>      <span class="comment">//系统调用函数</span></span></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line"> <span class="type">int</span> pid=fork();</span><br><span class="line"> </span><br><span class="line"> <span class="keyword">if</span>(pid==<span class="number">0</span>)&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;This is a child\n&quot;</span>);</span><br><span class="line">    exec(<span class="string">&quot;echo&quot;</span>,argv);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">else</span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;This is a parent\n&quot;</span>);</span><br><span class="line">    <span class="type">int</span> status;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br><span class="line">```    </span><br><span class="line">        ----fork</span><br><span class="line">shell----</span><br><span class="line">        ----exec</span><br><span class="line"></span><br><span class="line">即：shell的工作就是<span class="keyword">while</span>(<span class="number">1</span>)&#123;getcmd and runcmd&#125;</span><br><span class="line">获取到命令行，比如echo，就复制子进程，让子进程去exec这个echo，exec是完全替换，也就是说如果不报错,就不会返回</span><br><span class="line">父进程只需要等待子进程结束，然后父进程继续等待用户属于命令</span><br><span class="line"></span><br><span class="line">### 假设fork,exec集成为<span class="number">1</span>个系统调用，会发生什么？</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#<span class="meta"># exec系统调用</span></span><br><span class="line">从指定的特定文件中读取指令，并替换调用进程</span><br><span class="line">从文件中加载指令，覆盖当前进程，丢弃当前内存</span><br><span class="line">### 非常重要的一点是，exec保留了子进程从父进程复制过来的文件描述符表</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">##<span class="meta"># ordinary的exec不会返回，唯一的返回就是出错了</span></span><br><span class="line">就是因为exec不会返回，所以shell需要forK复制子进程，如果**shell不fork，就会导致shell进程被exec里的命令进程(如上面的echo进程)代替,不会返回，导致下一条Linux指令无从输起**</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">``` C</span><br><span class="line">forkexec.c:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;unistd.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> pid,status;</span><br><span class="line"></span><br><span class="line">    pid=fork();</span><br><span class="line">    <span class="keyword">if</span>(pid==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="type">char</span> *argv[] = &#123;<span class="string">&quot;echo&quot;</span>,<span class="string">&quot;THIS&quot;</span>,<span class="string">&quot;IS&quot;</span>,<span class="string">&quot;ECHO&quot;</span>,<span class="literal">NULL</span>&#125;;</span><br><span class="line">        execl(<span class="string">&quot;/usr/bin/echo&quot;</span>,argv[<span class="number">0</span>],argv[<span class="number">1</span>],argv[<span class="number">2</span>],argv[<span class="number">3</span>],<span class="literal">NULL</span>);                                                                                                 </span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;exec failed!&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;parent waiting\n&quot;</span>);</span><br><span class="line">        wait(&amp;status);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the child exited with status %d\n&quot;</span>,status);</span><br><span class="line">    &#125;   </span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>exec(“echo”,argv);不会返回如果exec正常运行了</strong>,输出如下：<br>parent waiting<br>THIS IS ECHO        &#x2F;&#x2F;总是自动忽略argv第一个argv元素<br>the child exited with status 0 &#x2F;&#x2F;0说明正常退出</p>
+<p>可以看到printf(“exec failed!”);并没有输出,也就是没有返回到forkexec,即子进程<strong>脱缰野马</strong><br>父进程shell不能脱缰，还需要其帮助我们输入Linux命令</p>
+<p>将exec里的文件名修改为一个不存在的文件名，才会打印printf(“exec failed!”);</p>
+<p>parent waiting<br>exec failed!the child exited with status 256</p>
+<h2 id="系统调用实现IO重定向"><a href="#系统调用实现IO重定向" class="headerlink" title="系统调用实现IO重定向"></a>系统调用实现IO重定向</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;sys/wait.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123; </span><br><span class="line">    <span class="type">int</span> pid;</span><br><span class="line">    pid=fork();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(pid==<span class="number">0</span>)&#123;</span><br><span class="line">        <span class="built_in">close</span>(<span class="number">1</span>);</span><br><span class="line">        <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>,O_WRONLY | O_CREATE); <span class="comment">//此两行代码实现标准输出重定向到output文件</span></span><br><span class="line"></span><br><span class="line">        <span class="type">char</span> *argv[] = &#123;<span class="string">&quot;echo&quot;</span>,<span class="string">&quot;this&quot;</span>,<span class="string">&quot;is&quot;</span>,<span class="string">&quot;redirected&quot;</span>,<span class="string">&quot;echo&quot;</span>,<span class="literal">NULL</span>&#125;;</span><br><span class="line">        <span class="built_in">execl</span>(<span class="string">&quot;/usr/bin/echo&quot;</span>,argv[<span class="number">0</span>],argv[<span class="number">1</span>],argv[<span class="number">2</span>],argv[<span class="number">3</span>],argv[<span class="number">4</span>],<span class="literal">NULL</span>);    <span class="comment">//echo默认输出到标准输出，也就是1,现在就会输出到output.txt了</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;exec failed!\n&quot;</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="built_in">wait</span>((<span class="type">int</span>*) <span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="系统调用抽象，合并使用，就变成了一系列Linux指令"><a href="#系统调用抽象，合并使用，就变成了一系列Linux指令" class="headerlink" title="系统调用抽象，合并使用，就变成了一系列Linux指令"></a>系统调用抽象，合并使用，就变成了一系列Linux指令</h2><p>例如：<br>cat,grep,makdir,ls,echo我们都可以通过实现不同的，独立的系统调用组合来实现<br>正式由于Unix提供可从shell作为用户级程序调用的文件程序，例如ls,mkdir,才会使得<br>任何人通过添加新的用户级程序扩展命令行接口</p>
+<h2 id="exercise"><a href="#exercise" class="headerlink" title="exercise"></a>exercise</h2><p><img src="/images/4.png" alt="图片"></p>
+
       
     </div>
 
@@ -267,7 +281,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2019/01/29/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/31/%E9%93%BE%E6%8E%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
@@ -285,7 +299,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2019/01/29/hello-world/" class="post-title-link" itemprop="url">利用GitHub和HEXO免费搭建个人博客高级 美化篇</a>
+          <a href="/2024/10/31/%E9%93%BE%E6%8E%A5/" class="post-title-link" itemprop="url">链接</a>
         </h2>
 
         <div class="post-meta-container">
@@ -295,15 +309,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2019-01-29 22:58:56" itemprop="dateCreated datePublished" datetime="2019-01-29T22:58:56+08:00">2019-01-29</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2024-10-29 20:36:00" itemprop="dateModified" datetime="2024-10-29T20:36:00+08:00">2024-10-29</time>
+      <time title="创建时间：2024-10-31 21:08:08 / 修改时间：23:28:49" itemprop="dateCreated datePublished" datetime="2024-10-31T21:08:08+08:00">2024-10-31</time>
     </span>
 
   
@@ -316,18 +324,678 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+          <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="链接的基本概念"><a href="#链接的基本概念" class="headerlink" title="链接的基本概念"></a>链接的基本概念</h3><p>关于链接的知识，<strong>计算机系统基础</strong>或者<strong>深入理解计算机系统</strong>讲的很明白了<br>链接就是将多个.cpp编译得到的.o文件，将.o文件中的符号重定位，然后合并成一个可执行文件</p>
+<p>注意的问题： C++编译错误:C1023 error<br>            C++链接错误:L2909 error,可以快速帮助定位程序错误</p>
+<h3 id="关于链接的有趣的操作"><a href="#关于链接的有趣的操作" class="headerlink" title="关于链接的有趣的操作"></a>关于链接的有趣的操作</h3><pre><code>链接器，最终要设置程序的入口点，入口点不一定要是main函数，他可以是任何一个名字，可以在VS中配置链接器的高级配置，设置程序入口点
+在Linux中设置g++编译器的自定义程序入口点
+</code></pre>
+<h3 id="链接导致的一些常见问题"><a href="#链接导致的一些常见问题" class="headerlink" title="链接导致的一些常见问题"></a>链接导致的一些常见问题</h3><pre><code>1.链接器发现缺少了main函数，即程序入口函数，就会报错：can&#39;t found _start
+</code></pre>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Math.cpp:</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"> <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	std::cout&lt;&lt;<span class="built_in">Multiply</span>(<span class="number">5</span>,<span class="number">8</span>)&lt;&lt;std::endl;</span><br><span class="line">	std::cin.<span class="built_in">get</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>正常运行</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Log.cpp:</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Math.cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"> <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	std::cout&lt;&lt;<span class="built_in">Multiply</span>(<span class="number">5</span>,<span class="number">8</span>)&lt;&lt;std::endl;</span><br><span class="line">	std::cin.<span class="built_in">get</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>报错：<br>g++ -c Math.cpp -o Math.o 单独编译Math.cpp报错:</p>
+<p>Math.cpp: In function ‘int Multiply(int, int)’:<br><strong>Math.cpp:6:2: error: ‘Log’ was not declared in this scope</strong><br>    6 |  Log(“Hello World\n”);<br>      |  ^~~<br>即没有Math.cpp中Log声明,没有这个声明，链接器就会认为没有必要去链接这个Log符号</p>
+<p>加上声明即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">g++ -c Math.cpp -o Math.o 单独编译Math.cpp，不报错</span><br><span class="line">但是生成可执行文件，就会报错</span><br><span class="line">因为，会编译将链接的所以函数，g++ -c Log.cpp -o Log.o，报错：</span><br><span class="line">error: &#x27;cout&#x27; is not a member of &#x27;std*</span><br><span class="line">3 |  std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br></pre></td></tr></table></figure>
+<p>因为编译器编译Log.cpp时发现名称空间错误,加上即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">g++ -c Math.cpp -o Math.o</span><br><span class="line">g++ -c Log.cpp -o Log.o</span><br><span class="line">g++ -o Math Math.o Log.o</span><br><span class="line">./Math </span><br><span class="line">Hello World</span><br><span class="line"></span><br><span class="line">40</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>下面是一种类型的链接错误，未解决的外部符号，Unresolved external symbol，<strong>深入理解计算机系统</strong>也讲了这个,即：链接器找不到他要的东西时<br>只需要修改上面Log.cpp</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">Log.cpp:</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Logr</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span>  现在函数名从Log到Logr</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Math.cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"> <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	std::cout&lt;&lt;<span class="built_in">Multiply</span>(<span class="number">5</span>,<span class="number">8</span>)&lt;&lt;std::endl;</span><br><span class="line">	std::cin.<span class="built_in">get</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">root@debian:/home/ics/Desktop<span class="meta"># g++ -c Math.cpp -o Math.o</span></span><br><span class="line">root@debian:/home/ics/Desktop<span class="meta"># g++ -c Log.cpp -o Log.o</span></span><br><span class="line">root@debian:/home/ics/Desktop<span class="meta"># g++ -o Math Math.o Log.o</span></span><br><span class="line">/usr/bin/ld: Math.o: in function `<span class="built_in">Multiply</span>(<span class="type">int</span>, <span class="type">int</span>)<span class="string">&#x27;:</span></span><br><span class="line"><span class="string">Math.cpp:(.text+0x1e): undefined reference to `Log(char const*)&#x27;</span></span><br><span class="line">collect2: error: ld returned <span class="number">1</span> exit status</span><br></pre></td></tr></table></figure>
+<p>*<em>Math.cpp:(.text+0x1e): undefined reference to &#96;Log(char const</em>)’**告诉我们：链接器找不到Math.cpp中Log符号对应的定义</p>
+<p>接下来，注释掉Multiply中的Log(“Hello World\n”);发现生成可执行文件成功,因为我从来没有调用过Log函数，自然不需要去链接它<br>但是如果只注释main函数中的Multiply可以吗，注释Multiply，就导致从来没有调用Multiply,也就从来没有调用Log,那是不是就会不会爆链接错误了呢?<br>很遗憾，不是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@debian:/home/ics/Desktop# g++ -c Math.cpp -o Math.o</span><br><span class="line">root@debian:/home/ics/Desktop# g++ -c Log.cpp -o Log.o</span><br><span class="line">root@debian:/home/ics/Desktop# g++ -o Math Math.o Log.o</span><br><span class="line">/usr/bin/ld: Math.o: in function `Multiply(int, int)&#x27;:</span><br><span class="line">Math.cpp:(.text+0x1e): undefined reference to `Log(char const*)&#x27;</span><br><span class="line">collect2: error: ld returned 1 exit status</span><br></pre></td></tr></table></figure>
+<p>为什么会这样呢？<br>因为我们在此文件(Math.cpp)中没有调用Multiply函数,但是可能在otherelse.cpp中调用了，所以链接器中有这样的规则，self.cpp文件中的函数应该被other.cpp调用，所以也应该能被链接，换句话说：对于任何一个.cpp中定义的函数，在链接时，都应该被合并到可执行文件中，<strong>计算机系统基础</strong>或者<strong>深入理解计算机系统</strong>中讲解了关于链接知识，链接三集合等</p>
+<p>但是，如果我们告诉编译器：hey bro,Multiply函数仅仅在Math.cpp中可以使用，对其他.cpp文件具有不可见性，那么就可以去掉这种链接的必要性了<br>等等，我们好像确实具有这种，static<br>然后就不报错了</p>
+<p>为什么静态方法被设计成只能在本文件内调用？<br>上述就很好的说明了这个问题，当我们希望本.cpp文件里的函数或者全局变量不被别的函数链接，就设置静态，这样就不会发生链接错误了<br>比如，在别的.cpp文件中声明了一个函数声明，刚好和本.cpp文件中某个函数的原型是一样的，但是功能却完全不同，这样就会发生天大的bug,所以避免这种bug,让其局限在本.cpp中吧<br>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> sum1=<span class="built_in">sum</span>(<span class="number">10</span>,<span class="number">2</span>);</span><br><span class="line">    std::cout&lt;&lt;<span class="string">&quot;10+2=&quot;</span>&lt;&lt;<span class="built_in">sum</span>(<span class="number">10</span>,<span class="number">2</span>)&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line">单独编译<span class="number">1.</span>cpp:   g++ -c <span class="number">1.</span>cpp -o <span class="number">1.</span>o</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>cpp:</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">sum</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line">单独编译<span class="number">1.</span>cpp:   g++ -c <span class="number">2.</span>cpp -o <span class="number">2.</span>o</span><br><span class="line"></span><br><span class="line">链接为可执行文件: </span><br><span class="line">输出<span class="number">20</span>，不是<span class="number">12</span>，会发现链接错了，最好就是让<span class="number">2.</span>cpp中加<span class="type">static</span>,不被<span class="number">1.</span>o链接</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="第二个常见链接错误是多重符号"><a href="#第二个常见链接错误是多重符号" class="headerlink" title="第二个常见链接错误是多重符号"></a>第二个常见链接错误是多重符号</h4><p>相同名字的变量或者参数的函数，应为链接器不知道链接到哪一个</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Log.cpp:</span><br><span class="line">#include&lt;iostream&gt;</span><br><span class="line">void Log(const char* message)</span><br><span class="line">&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void Log(const char* message)</span><br><span class="line">&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>这个多重定义不需要链接器出手，编译器就可以看出错误了，因为在同一个文件中，还没开始链接就可以看到错误</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">Log.h:</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Log.cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&quot;Log.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InitLog</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Initialized Log&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Math.cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Log.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"> <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//std::cout&lt;&lt;Multiply(5,8)&lt;&lt;std::endl;</span></span><br><span class="line">	std::cin.<span class="built_in">get</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">root@debian:/home/ics/Desktop<span class="meta"># g++ -c Math.cpp -o Math.o</span></span><br><span class="line">root@debian:/home/ics/Desktop<span class="meta"># g++ -c Log.cpp -o Log.o</span></span><br><span class="line">root@debian:/home/ics/Desktop<span class="meta"># g++ Math.o Log.o -o Math</span></span><br><span class="line">/usr/bin/ld: Log.o: in function `<span class="built_in">Log</span>(<span class="type">char</span> <span class="type">const</span>*)<span class="string">&#x27;:</span></span><br><span class="line"><span class="string">Log.cpp:(.text+0x0): multiple definition of `Log(char const*)&#x27;</span>; Math.o:Math.cpp:(.text<span class="number">+0x0</span>): first defined here</span><br><span class="line">collect2: error: ld returned <span class="number">1</span> exit status</span><br><span class="line">直接报，多重定义了</span><br></pre></td></tr></table></figure>
+<p>why?<br>这就和预处理器include有关了</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Log.cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InitLog</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Initialized Log&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Math.cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"> <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//std::cout&lt;&lt;Multiply(5,8)&lt;&lt;std::endl;</span></span><br><span class="line">	std::cin.<span class="built_in">get</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原因就是在Math.cpp，Log.cpp中#include”Log.h”，所以这种错误会非常容易犯，最好的办法是避免，<strong>在头文件中尽量避免直接定义函数</strong></p>
+<p><strong>有没有解决办法</strong><br>有就是刚才的static<br>这会使得Log.cpp和Math.cpp中的Log函数是独立的，他们都有各自版本的Log函数，只能在本.cpp文件中使用,就不会导致链接器不知道去Math.cpp还是Log.cpp中链接Log函数了</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Log.h:</span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>还有一种方法</strong><br>inline内联<br>就是把函数体复制到调用函数的地方</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Log.h:</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line">Log.cpp:</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InitLog</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="comment">//Log(&quot;Initialized Log&quot;);</span></span><br><span class="line"> <span class="comment">//被替换成</span></span><br><span class="line"> std::cout&lt;&lt;<span class="string">&quot;Initialized Log&quot;</span>&lt;&lt;std::endl;<span class="comment">//Log函数的函数体</span></span><br><span class="line">&#125;</span><br><span class="line">Math.cpp:</span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="comment">//Log(&quot;Hello World\n&quot;);</span></span><br><span class="line">  <span class="comment">//被替换成</span></span><br><span class="line"> std::cout&lt;&lt;<span class="string">&quot;Initialized Log&quot;</span>&lt;&lt;std::endl;<span class="comment">//Log函数的函数体</span></span><br><span class="line"> <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>最好的办法，规定</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Log.h:</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span>;<span class="comment">//声明</span></span><br><span class="line">Log.cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Log.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span><span class="comment">//定义</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">InitLog</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Initialized Log&quot;</span>);<span class="comment">//调用</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Math.cpp:</span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;Log.h&quot;</span></span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> std::cout&lt;&lt;message&lt;&lt;std::endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">static</span> <span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Hello World\n&quot;</span>);<span class="comment">//调用</span></span><br><span class="line"> <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//std::cout&lt;&lt;Multiply(5,8)&lt;&lt;std::endl;</span></span><br><span class="line">	std::cin.<span class="built_in">get</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/31/%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E6%9C%BA%E5%88%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/31/%E5%BC%82%E5%B8%B8%E5%92%8C%E4%B8%AD%E6%96%AD%E6%9C%BA%E5%88%B6/" class="post-title-link" itemprop="url">异常和中断机制</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-31 17:01:34 / 修改时间：17:10:45" itemprop="dateCreated datePublished" datetime="2024-10-31T17:01:34+08:00">2024-10-31</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="异常表基址寄存器（exception-table-base-register）"><a href="#异常表基址寄存器（exception-table-base-register）" class="headerlink" title="异常表基址寄存器（exception table base register）"></a>异常表基址寄存器（exception table base register）</h2><p><img src="/images/3.png" alt="图片"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/%E7%BC%96%E8%AF%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/30/%E7%BC%96%E8%AF%91/" class="post-title-link" itemprop="url">编译</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-10-30 22:18:58" itemprop="dateCreated datePublished" datetime="2024-10-30T22:18:58+08:00">2024-10-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-10-31 21:28:51" itemprop="dateModified" datetime="2024-10-31T21:28:51+08:00">2024-10-31</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="C-编译"><a href="#C-编译" class="headerlink" title="C++编译"></a>C++编译</h2><p>在 visual studio 中使用以下步骤来只编译一个源文件：<br>在“解决方案资源管理器”中，右键单击要编译的源文件。<br>选择“属性”选项。<br>在“属性页”中，选择“常规”选项卡。<br>将“项类型”设置为“不参与生成”。<br><img src="/images/2.png" alt="图片"><br>单击“确定”按钮。</p>
+<h3 id="预处理"><a href="#预处理" class="headerlink" title="预处理"></a>预处理</h3><p>比如#include,#define,if def等都是预处理，预处理器将其.h文件中的函数声明等信息复制粘贴到.cpp文件</p>
+<p>首先开启C++的配置：打开C++预处理到文件的选项，如下：<br><img src="/images/1.png" alt="图片"><br>这里选项改为是</p>
+<p>VS编译器用的还是不习惯，用Linux下的编译器算了</p>
+<p>Math.cpp</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#int Multiply(int a,int b)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> result=a*b;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;yxl&quot;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>yxl.h，注意在linux下直接vim yxl即可，不要vim yxl.h，否则报错: </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Math.cpp:5:10: fatal error: yxl: No such file or directory</span><br><span class="line">      | #include &quot;yxl&quot;</span><br><span class="line">      |          ^~~~~</span><br><span class="line">compilation terminated.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>编译</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">g++ -c Math.cpp -o Math</span><br></pre></td></tr></table></figure>
+<p>要开启选项 -c,否则报错：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/usr/bin/ld: /usr/lib/gcc/i686-linux-gnu/12/../../../i386-linux-gnu/Scrt1.o: in function `_start&#x27;:</span><br><span class="line">(.text+0x1e): undefined reference to `main&#x27;</span><br></pre></td></tr></table></figure>
+<p>_start就是x64系统的程序执行入口，就是目标ELF代码文件中的程序入口点</p>
+<p>求Math.cpp，预处理文件<br>g++ -E Math.cpp -o Math.i</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> 0 &quot;Math.cpp&quot;                                                                                                                 </span><br><span class="line">  0 &quot;&lt;built-in&gt;&quot;</span><br><span class="line">  0 &quot;&lt;command-line&gt;&quot;</span><br><span class="line">  1 &quot;/usr/include/stdc-predef.h&quot; 1 3 4 </span><br><span class="line">  0 &quot;&lt;command-line&gt;&quot; 2</span><br><span class="line">  1 &quot;Math.cpp&quot;</span><br><span class="line">int Multiply(int a,int b)</span><br><span class="line">&#123;</span><br><span class="line">    int result=a*b;</span><br><span class="line">    return result;</span><br><span class="line">  1 &quot;yxl&quot; 1</span><br><span class="line">&#125;</span><br><span class="line">6 &quot;Math.cpp&quot; 2</span><br></pre></td></tr></table></figure>
+
+<p>发现yxl.h里的}复制到了Math.cpp里</p>
+<h3 id="文件不重要"><a href="#文件不重要" class="headerlink" title="文件不重要"></a>文件不重要</h3><p>编译器知道对于.cpp文本文件，就把他编译成一个机器码，在CPU上可以直接跑，这是我们规定的<br>假如告诉编译器，对于.yxl文本文件，也像C++文本文件一样处理，同样可以得到直接在CPU上跑的机器码</p>
+<h3 id="是否开启编译优化带来的影响"><a href="#是否开启编译优化带来的影响" class="headerlink" title="是否开启编译优化带来的影响"></a>是否开启编译优化带来的影响</h3><p>objdump -S Math.o &gt; Math.s</p>
+<p>不开启优化</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> result=a*b;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;yxl&quot;</span>  </span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g++ -c -O3 Math.cpp -o Math</span><br><span class="line">objdump -S Math &gt; Math.s</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>汇编代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Math:     file format elf32-i386</span><br><span class="line"></span><br><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">00000000 &lt;_Z8Multiplyii&gt;:</span><br><span class="line">   0: 55                    push   %ebp</span><br><span class="line">   1: 89 e5                 mov    %esp,%ebp</span><br><span class="line">   3: 83 ec 10              sub    $0x10,%esp</span><br><span class="line">   6: e8 fc ff ff ff        call   7 &lt;_Z8Multiplyii+0x7&gt;</span><br><span class="line">   b: 05 01 00 00 00        add    $0x1,%eax</span><br><span class="line">  10: 8b 45 08              mov    0x8(%ebp),%eax</span><br><span class="line">  13: 0f af 45 0c           imul   0xc(%ebp),%eax</span><br><span class="line">  17: 89 45 fc              mov    %eax,-0x4(%ebp)</span><br><span class="line">  1a: 8b 45 fc              mov    -0x4(%ebp),%eax</span><br><span class="line">  1d: c9                    leave</span><br><span class="line">  1e: c3                    ret</span><br><span class="line"></span><br><span class="line">Disassembly of section .text.__x86.get_pc_thunk.ax:</span><br><span class="line"></span><br><span class="line">00000000 &lt;__x86.get_pc_thunk.ax&gt;:</span><br><span class="line">   0: 8b 04 24              mov    (%esp),%eax</span><br><span class="line">   3: c3                    ret</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>可以看到,这里a在0x8(%ebp),b在0xc(%ebp)，result在-0x4(%ebp)中，然后将-0x4(%ebp)放到%eax，如果开启编译优化，17和1a这两行，是没有的，看下面</p>
+<p>开启优化代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Multiply</span><span class="params">(<span class="type">int</span> a,<span class="type">int</span> b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">g++ -O2 -c  Math.cpp -o Math</span><br><span class="line">objdump -S Math.o &gt; Math.s</span><br></pre></td></tr></table></figure>
+<p>汇编代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Math:     file format elf32-i386</span><br><span class="line"></span><br><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">00000000 &lt;_Z8Multiplyii&gt;:</span><br><span class="line">   0: 8b 44 24 08           mov    0x8(%esp),%eax</span><br><span class="line">   4: 0f af 44 24 04        imul   0x4(%esp),%eax</span><br><span class="line">   9: c3                    ret</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>可以看到分配变量的操作可能导致更多的寄存器，和更长的汇编指令和机器指令</p>
+<h2 id="常数折叠"><a href="#常数折叠" class="headerlink" title="常数折叠"></a>常数折叠</h2><p>尽管不开启编译优化，所有的常数运算，都不需要真正计算，即cpp文件中的+，-，*，&#x2F;，转换成汇编代码之后，实际上不会出现，add,mul,div等指令<br>如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">Multiply</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">5</span>,<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">g++ -O2 -c  Math.cpp -o Math</span><br><span class="line">objdump -S Math.o &gt; Math.s</span><br><span class="line">cat Math.s | xclip -selection clipboard 复制Math.s内容到剪切板</span><br></pre></td></tr></table></figure>
+<p>汇编代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Math:     file format elf32-i386</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">00000000 &lt;_Z8Multiplyv&gt;:</span><br><span class="line">   0:	55                   	push   %ebp</span><br><span class="line">   1:	89 e5                	mov    %esp,%ebp</span><br><span class="line">   3:	83 ec 10             	sub    $0x10,%esp</span><br><span class="line">   6:	e8 fc ff ff ff       	call   7 &lt;_Z8Multiplyv+0x7&gt;</span><br><span class="line">   b:	05 01 00 00 00       	add    $0x1,%eax</span><br><span class="line">  10:	8b 45 fc             	mov    -0x4(%ebp),%eax</span><br><span class="line">  13:	c9                   	leave</span><br><span class="line">  14:	c3                   	ret</span><br><span class="line"></span><br><span class="line">Disassembly of section .text.__x86.get_pc_thunk.ax:</span><br><span class="line"></span><br><span class="line">00000000 &lt;__x86.get_pc_thunk.ax&gt;:</span><br><span class="line">   0:	8b 04 24             	mov    (%esp),%eax</span><br><span class="line">   3:	c3                   	ret</span><br></pre></td></tr></table></figure>
+<p>会发现这里的10是直接得到的，根本就没有出现add指令</p>
+<p>在来一个比较大的数100*2000</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Math:     file format elf32-i386</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">00000000 &lt;_Z8Multiplyv&gt;:</span><br><span class="line">   0:	55                   	push   %ebp</span><br><span class="line">   1:	89 e5                	mov    %esp,%ebp</span><br><span class="line">   3:	e8 fc ff ff ff       	call   4 &lt;_Z8Multiplyv+0x4&gt;</span><br><span class="line">   8:	05 01 00 00 00       	add    $0x1,%eax</span><br><span class="line">   d:	b8 40 0d 03 00       	mov    $0x30d40,%eax</span><br><span class="line">  12:	5d                   	pop    %ebp</span><br><span class="line">  13:	c3                   	ret</span><br><span class="line"></span><br><span class="line">Disassembly of section .text.__x86.get_pc_thunk.ax:</span><br><span class="line"></span><br><span class="line">00000000 &lt;__x86.get_pc_thunk.ax&gt;:</span><br><span class="line">   0:	8b 04 24             	mov    (%esp),%eax</span><br><span class="line">   3:	c3                   	ret</span><br></pre></td></tr></table></figure>
+<p>$0x30d40就是200000，根本就没有imul指令，这说明编译器认为常数折叠是必须的，不开启优化就有的</p>
+<p>再举个编译优化的例子</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">const</span> <span class="type">char</span>* <span class="title">Log</span><span class="params">(<span class="type">const</span> <span class="type">char</span>* message)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> message;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">Multiply</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"> <span class="built_in">Log</span>(<span class="string">&quot;Hello World\n&quot;</span>);</span><br><span class="line"> <span class="keyword">return</span> <span class="number">5</span>*<span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不开启优化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">Math:     file format elf32-i386</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">00000000 &lt;_Z3LogPKc&gt;:</span><br><span class="line">   0:	55                   	push   %ebp</span><br><span class="line">   1:	89 e5                	mov    %esp,%ebp</span><br><span class="line">   3:	e8 fc ff ff ff       	call   4 &lt;_Z3LogPKc+0x4&gt;</span><br><span class="line">   8:	05 01 00 00 00       	add    $0x1,%eax</span><br><span class="line">   d:	8b 45 08             	mov    0x8(%ebp),%eax</span><br><span class="line">  10:	5d                   	pop    %ebp</span><br><span class="line">  11:	c3                   	ret</span><br><span class="line"></span><br><span class="line">00000012 &lt;_Z8Multiplyv&gt;:</span><br><span class="line">  12:	55                   	push   %ebp</span><br><span class="line">  13:	89 e5                	mov    %esp,%ebp</span><br><span class="line">  15:	e8 fc ff ff ff       	call   16 &lt;_Z8Multiplyv+0x4&gt;</span><br><span class="line">  1a:	05 01 00 00 00       	add    $0x1,%eax</span><br><span class="line">  1f:	8d 80 00 00 00 00    	lea    0x0(%eax),%eax</span><br><span class="line">  25:	50                   	push   %eax</span><br><span class="line">  26:	e8 fc ff ff ff       	call   27 &lt;_Z8Multiplyv+0x15&gt;</span><br><span class="line">  2b:	83 c4 04             	add    $0x4,%esp</span><br><span class="line">  2e:	b8 0a 00 00 00       	mov    $0xa,%eax</span><br><span class="line">  33:	c9                   	leave</span><br><span class="line">  34:	c3                   	ret</span><br><span class="line"></span><br><span class="line">Disassembly of section .text.__x86.get_pc_thunk.ax:</span><br><span class="line"></span><br><span class="line">00000000 &lt;__x86.get_pc_thunk.ax&gt;:</span><br><span class="line">   0:	8b 04 24             	mov    (%esp),%eax</span><br><span class="line">   3:	c3                   	ret</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Disassembly of section .text.__x86.get_pc_thunk.ax:</span><br><span class="line"></span><br><span class="line">00000000 &lt;__x86.get_pc_thunk.ax&gt;:</span><br><span class="line">   0:	8b 04 24             	mov    (%esp),%eax</span><br><span class="line">   3:	c3                   	ret</span><br></pre></td></tr></table></figure>
+
+<p>开启优化</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">Math:     file format elf32-i386</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Disassembly of section .text:</span><br><span class="line"></span><br><span class="line">00000000 &lt;_Z3LogPKc&gt;:</span><br><span class="line">   0:	8b 44 24 04          	mov    0x4(%esp),%eax</span><br><span class="line">   4:	c3                   	ret</span><br><span class="line">   5:	8d b4 26 00 00 00 00 	lea    0x0(%esi,%eiz,1),%esi</span><br><span class="line">   c:	8d 74 26 00          	lea    0x0(%esi,%eiz,1),%esi</span><br><span class="line"></span><br><span class="line">00000010 &lt;_Z8Multiplyv&gt;:</span><br><span class="line">  10:	b8 0a 00 00 00       	mov    $0xa,%eax</span><br><span class="line">  15:	c3                   	ret</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/%E5%86%85%E8%81%94%E6%B1%87%E7%BC%96%E4%B8%8E%E5%AE%8F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/30/%E5%86%85%E8%81%94%E6%B1%87%E7%BC%96%E4%B8%8E%E5%AE%8F/" class="post-title-link" itemprop="url">内联汇编与宏</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-30 12:23:29 / 修改时间：12:23:45" itemprop="dateCreated datePublished" datetime="2024-10-30T12:23:29+08:00">2024-10-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/C++%E7%B3%BB%E5%88%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/30/C++%E7%B3%BB%E5%88%97/" class="post-title-link" itemprop="url">C++系列</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-30 12:08:54 / 修改时间：12:09:30" itemprop="dateCreated datePublished" datetime="2024-10-30T12:08:54+08:00">2024-10-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="C-内存管理"><a href="#C-内存管理" class="headerlink" title="[C++内存管理]"></a>[C++内存管理]</h2>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/%E6%97%A5%E5%B8%B8%E6%9D%82%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/30/%E6%97%A5%E5%B8%B8%E6%9D%82%E8%AE%B0/" class="post-title-link" itemprop="url">日常杂记</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-30 12:03:50 / 修改时间：12:04:16" itemprop="dateCreated datePublished" datetime="2024-10-30T12:03:50+08:00">2024-10-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="日常一事"><a href="#日常一事" class="headerlink" title="日常一事"></a>日常一事</h2>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/English/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/30/English/" class="post-title-link" itemprop="url">English</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-30 11:46:39 / 修改时间：11:58:18" itemprop="dateCreated datePublished" datetime="2024-10-30T11:46:39+08:00">2024-10-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Iansdbc"><a href="#Iansdbc" class="headerlink" title="Iansdbc"></a>Iansdbc</h2><p>English学习</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/%E8%A1%A5%E7%A0%81%E4%B9%8B%E7%89%B9%E6%AE%8A%E7%9A%8410000000/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/30/%E8%A1%A5%E7%A0%81%E4%B9%8B%E7%89%B9%E6%AE%8A%E7%9A%8410000000/" class="post-title-link" itemprop="url">补码之特殊的10000000</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-30 11:37:57 / 修改时间：11:38:11" itemprop="dateCreated datePublished" datetime="2024-10-30T11:37:57+08:00">2024-10-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="时钟里的补数"><a href="#时钟里的补数" class="headerlink" title="时钟里的补数"></a>时钟里的补数</h2><p>现在指向6点，如果想到3点，逆时针拨动3格，顺时针拨动9格到，所以-3和9互为补数</p>
+<h2 id="补码的目的"><a href="#补码的目的" class="headerlink" title="补码的目的"></a>补码的目的</h2><p>计算机里存储的是补码，为了让计算机里存储的数，加减法使用同一套电路，也就是补码加减器，做减法时，+负数的补码，就将减法转换为了加法</p>
+<p>所以补码有符号位<br>假设是8位补码系统，[00000000,01111111]是正数，[10000000,11111111]是负数<br>根据负数求补码的公式：x是真值，x&lt;0, [x]补 &#x3D; 256+x &#x3D;&#x3D;&#x3D;&#x3D;&gt; x&#x3D;[x]补-256,得到了根据补码求真值的<strong>普遍方法</strong>(<strong>适用于任何补码</strong>):<br>[-1]补&#x3D;256+(-1)&#x3D;255&#x3D;11111111 ，-1 &#x3D;补码11111111-256<br>[-127]补&#x3D;256+(-127)&#x3D;129&#x3D;10000001，-127&#x3D;补码10000001-256</p>
+<p>特殊的-128来了<br>[-128]补&#x3D;256+(-128)&#x3D;128&#x3D;10000000 ,-128&#x3D;补码10000000-256,所以补码10000000的真值为-128</p>
+<p>已知补码求真值，<strong>一般方法</strong>可以是：补码-1求得反码，反码求原码，再求真值<br>补码11111111，反码11111110，原码10000001，真值-1<br>补码10000001，反码10000000，原码11111110，真值-127</p>
+<p>但是特殊的补码10000000呢？<br>补码10000000，反码01111111，原码10000000，真值-0 这个肯定是错误的，-0在计算机中以00000000的补码形式存储，与+0一样<br>其实这里开始就错了：<br>普遍方法中求得的真值永远是对的，所以补码为10000000&#x3D;&gt;符号位为1，所以是负数，所以按照公式[x]补 &#x3D; 256+x求真值x,x&#x3D;10000000-256&#x3D;-10000000&#x3D;-128<br>我们知道真值-128，不存在8位原码，8位反码，所以不能根据这种一般方法求</p>
+<p>所以为了不出错，我们需要记住10000000这个特殊的机器数，不存在原码，反码，所以补码求原码这种算法不存在</p>
+<p>这就是特殊的机器数，1……..,1后面n-1个0（假设机器字长为n位）</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/30/%E8%A1%A5%E7%A0%81%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2024/10/30/%E8%A1%A5%E7%A0%81%E5%85%AC%E5%BC%8F%E6%8E%A8%E5%AF%BC/" class="post-title-link" itemprop="url">补码公式推导</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-10-30 11:36:13 / 修改时间：11:38:29" itemprop="dateCreated datePublished" datetime="2024-10-30T11:36:13+08:00">2024-10-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>why [负数]补码&#x3D;[-负数]的补码,取反+1<br>[负数]补+[-负数]补&#x3D;模，在时钟中，模为12，在定点小数中，模为2，在n位整数中模为2^n<br>例如：8位整数<br>[-1]补+[1]补 &#x3D; 11111111+00000001&#x3D;1 0000 0000 &#x3D; 256 &#x3D; 2^8<br>[-x]补+[x]补 &#x3D; 2^n,假设x&gt;0,so: [-x]补+[x]补&#x3D;2^n,即[-x]补+x&#x3D;2^n,so: [-x]补 &#x3D; 2^n-x &#x3D; (2^n-1-x)+1<br>即：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set x=1,[-x]补 = (2^8-1-x)+1 = (11111111-1)+1 = (11111111-00000001)+1</span><br></pre></td></tr></table></figure>
+<p>可以看到括号里面的00000001就是+1的补码，括号的结果就是+1的补码取反的结果<br>即：11111110，+1得到11111111<br>所以常说负数的补码等于其正数的补码取反+1</p>
+<p>例外情况<br>从来如此，便一定对吗<br>还是内个熟悉的真值-128<br>假设按上面的求法，[-128]补&#x3D;[128]补,取反+1<br>但是我们发现，128根本没有8位补码，所以只能用公式法求了，[x]补&#x3D;x+256,即:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[-128]=-128+256=1 0000 0000 - 10000000 = (11111111 - 10000000)+1 = 10000000</span><br></pre></td></tr></table></figure>
+<p>会发现这个公式其实与上面的计算过程一样</p>
+<p>所以[负数]补码&#x3D;[正数]补码取反+1不太好<br>应为-128对应的负数不存在补码，但是，**[负数]补&#x3D;[正数对应的二进制]取反+1**,这样就适用于任意情况了，这才是正确的公式</p>
 
       
     </div>
@@ -347,7 +1015,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
