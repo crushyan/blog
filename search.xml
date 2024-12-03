@@ -387,4 +387,59 @@
         <category>C++链接</category>
       </categories>
   </entry>
+  <entry>
+    <title>mapper映射文件的构建</title>
+    <url>/2024/12/02/C-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h2 id="mapper映射文件的构建"><a href="#mapper映射文件的构建" class="headerlink" title="mapper映射文件的构建"></a>mapper映射文件的构建</h2>]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>C++箭头操作符</title>
+    <url>/2024/12/02/C-%E7%AE%AD%E5%A4%B4%E6%93%8D%E4%BD%9C%E7%AC%A6/</url>
+    <content><![CDATA[<p>C++箭头操作符号<br>C++</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>mybatis映射mapper.xml文件不编译的问题</title>
+    <url>/2024/12/03/mybatis%E6%98%A0%E5%B0%84mapper-xml%E6%96%87%E4%BB%B6%E4%B8%8D%E7%BC%96%E8%AF%91%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="Mybatis默认不会映射src-main-java文件夹下面的xml文件"><a href="#Mybatis默认不会映射src-main-java文件夹下面的xml文件" class="headerlink" title="Mybatis默认不会映射src&#x2F;main&#x2F;java文件夹下面的xml文件"></a>Mybatis默认不会映射src&#x2F;main&#x2F;java文件夹下面的xml文件</h2><p>现在src&#x2F;resources&#x2F;下创建目录，记得创建时写cn&#x2F;edu&#x2F;hbpu&#x2F;mapper,最终显示是cn.edu.hbpu.mapper,但是如果创建目录时是cn.edu.hbpu.mapper<br>即使显示的都是cn.edu.hbpu.mapper,但在映射时还是可能出现问题,所以最好写cn&#x2F;edu&#x2F;hbpu&#x2F;mapper</p>
+<p>在这个目录（src&#x2F;resources&#x2F;cn&#x2F;edu&#x2F;hbpu&#x2F;mapper）下放xml文件<br><img src="/images/21.png" alt="图片"><br>在target文件夹中，如下：<br><img src="/images/19.png" alt="图片"></p>
+<p>但是这个是pom.xml下添加了resource设置的原因</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--         如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/java<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.properties<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.properties<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="如果不添加此节点-cn-edu-hbpu-mapper下的mapper-xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件"><a href="#如果不添加此节点-cn-edu-hbpu-mapper下的mapper-xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件" class="headerlink" title="如果不添加此节点,cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下的mapper.xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件"></a>如果不添加此节点,cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下的mapper.xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件</h2><h3 id="注释掉pom-xml中的标签，结果如下"><a href="#注释掉pom-xml中的标签，结果如下" class="headerlink" title="注释掉pom.xml中的标签，结果如下"></a>注释掉pom.xml中的<resources>标签，结果如下</h3><p><img src="/images/20.png" alt="图片"><br><img src="/images/22.png" alt="图片"><br>可以看到src&#x2F;main&#x2F;java下的userMapper.xml并没有加载到target下</p>
+<h3 id="注释取消就会加载成功，如下："><a href="#注释取消就会加载成功，如下：" class="headerlink" title="注释取消就会加载成功，如下："></a>注释取消就会加载成功，如下：</h3><p><img src="/images/23.png" alt="图片"></p>
+<p>注意xml文件放在src&#x2F;resources&#x2F;cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下<br>还是放在src&#x2F;java&#x2F;cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下是一样的</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>段描述符中的Limit</title>
+    <url>/2024/12/02/%E6%AE%B5%E6%8F%8F%E8%BF%B0%E7%AC%A6%E4%B8%AD%E7%9A%84Limit/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Mybatis映射问题</title>
+    <url>/2024/12/03/Mybatis%E6%98%A0%E5%B0%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="Comment表"><a href="#Comment表" class="headerlink" title="Comment表"></a>Comment表</h2><p><img src="/images/24.png" alt="图片"></p>
+<h2 id="Mapper代码"><a href="#Mapper代码" class="headerlink" title="Mapper代码"></a>Mapper代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">CommetMapper</span> &#123;</span><br><span class="line">    <span class="comment">//根据用户id,获取该用户发表的所有评论,返回的是一个commentList</span></span><br><span class="line">    <span class="meta">@Select(&quot;select * from comment where uid=#&#123;uid&#125;&quot;)</span></span><br><span class="line">    <span class="meta">@Results(&#123;</span></span><br><span class="line"><span class="meta">            // @Result(column = &quot;aid&quot;,property = &quot;aid&quot;),</span></span><br><span class="line"><span class="meta">            @Result(column = &quot;aid&quot;,property = &quot;article&quot;,</span></span><br><span class="line"><span class="meta">            one = @One(select = &quot;cn.edu.hbpu.mapper.ArticleMapper.selectByAid&quot;) )</span></span><br><span class="line"><span class="meta">    &#125;)</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Comment&gt; <span class="title function_">selectCommentsByUid</span><span class="params">(Integer uid)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Autowired</span></span><br><span class="line">    CommetMapper commetMapper;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">selectComments</span><span class="params">()</span>&#123;</span><br><span class="line">        List&lt;Comment&gt; commentList = commetMapper.selectCommentsByUid(<span class="number">2</span>);</span><br><span class="line">                commentList.forEach(System.out::println);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="输出结果"><a href="#输出结果" class="headerlink" title="输出结果"></a>输出结果</h2><p><img src="/images/25.png" alt="图片"><br>为什么输出结果中的Comment对象的aid成员变量&#x3D;0，不应该是后面的article的aid吗？<br>问题就在这里，下面代码</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Results(&#123;</span></span><br><span class="line"><span class="meta">            @Result(column = &quot;aid&quot;,property = &quot;article&quot;,</span></span><br><span class="line"><span class="meta">            one = @One(select = &quot;cn.edu.hbpu.mapper.ArticleMapper.selectByAid&quot;) )</span></span><br><span class="line"><span class="meta">    &#125;)</span></span><br></pre></td></tr></table></figure>
+<p>这个 @Result(column &#x3D; “aid”,property &#x3D; “article”,<br>            one &#x3D; @One(select &#x3D; “cn.edu.hbpu.mapper.ArticleMapper.selectByAid”) )<br>将结果集中的aid列映射给selectbyAid中的某个方法，并且也没有强制要求映射给comment对象的aid,所以映射1次</p>
+<p><img src="/images/26.png" alt="图片"></p>
+<h2 id="取消mapper接口中的注释行，即"><a href="#取消mapper接口中的注释行，即" class="headerlink" title="取消mapper接口中的注释行，即"></a>取消mapper接口中的注释行，即</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">CommetMapper</span> &#123;</span><br><span class="line">    <span class="comment">//根据用户id,获取该用户发表的所有评论,返回的是一个commentList</span></span><br><span class="line">    <span class="meta">@Select(&quot;select * from comment where uid=#&#123;uid&#125;&quot;)</span></span><br><span class="line">    <span class="meta">@Results(&#123;</span></span><br><span class="line"><span class="meta">            @Result(column = &quot;aid&quot;,property = &quot;aid&quot;),</span></span><br><span class="line"><span class="meta">            @Result(column = &quot;aid&quot;,property = &quot;article&quot;,</span></span><br><span class="line"><span class="meta">            one = @One(select = &quot;cn.edu.hbpu.mapper.ArticleMapper.selectByAid&quot;) )</span></span><br><span class="line"><span class="meta">    &#125;)</span></span><br><span class="line">    <span class="keyword">public</span> List&lt;Comment&gt; <span class="title function_">selectCommentsByUid</span><span class="params">(Integer uid)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="输出结果-1"><a href="#输出结果-1" class="headerlink" title="输出结果"></a>输出结果</h2><p><img src="/images/27.png" alt="图片"><br>可以看到@Result(column &#x3D; “aid”,property &#x3D; “aid”)确实把结果集中的aid列映射给了comment对象的aid</p>
+]]></content>
+      <categories>
+        <category>JAVA</category>
+      </categories>
+  </entry>
 </search>

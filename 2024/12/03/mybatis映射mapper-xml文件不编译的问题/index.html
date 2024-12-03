@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/favicon-32x32-next.png" color="#222">
+  <link rel="manifest" href="/manifest.json">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic%7CPT+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.21.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":"mac"},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Mybatis默认不会映射src&#x2F;main&#x2F;java文件夹下面的xml文件现在src&#x2F;resources&#x2F;下创建目录，记得创建时写cn&#x2F;edu&#x2F;hbpu&#x2F;mapper,最终显示是cn.edu.hbpu.mapper,但是如果创建目录时是cn.edu.hbpu.mapper即使显示的都是cn.edu.hbpu.mapper,但在映">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mybatis映射mapper.xml文件不编译的问题">
+<meta property="og:url" content="http://example.com/2024/12/03/mybatis%E6%98%A0%E5%B0%84mapper-xml%E6%96%87%E4%BB%B6%E4%B8%8D%E7%BC%96%E8%AF%91%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Kim的博客">
+<meta property="og:description" content="Mybatis默认不会映射src&#x2F;main&#x2F;java文件夹下面的xml文件现在src&#x2F;resources&#x2F;下创建目录，记得创建时写cn&#x2F;edu&#x2F;hbpu&#x2F;mapper,最终显示是cn.edu.hbpu.mapper,但是如果创建目录时是cn.edu.hbpu.mapper即使显示的都是cn.edu.hbpu.mapper,但在映">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/21.png">
+<meta property="og:image" content="http://example.com/images/19.png">
+<meta property="og:image" content="http://example.com/images/20.png">
+<meta property="og:image" content="http://example.com/images/22.png">
+<meta property="og:image" content="http://example.com/images/23.png">
+<meta property="article:published_time" content="2024-12-03T15:11:01.000Z">
+<meta property="article:modified_time" content="2024-12-03T15:29:54.114Z">
+<meta property="article:author" content="yanxinlong">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/21.png">
+
+
+<link rel="canonical" href="http://example.com/2024/12/03/mybatis%E6%98%A0%E5%B0%84mapper-xml%E6%96%87%E4%BB%B6%E4%B8%8D%E7%BC%96%E8%AF%91%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2024/12/03/mybatis%E6%98%A0%E5%B0%84mapper-xml%E6%96%87%E4%BB%B6%E4%B8%8D%E7%BC%96%E8%AF%91%E7%9A%84%E9%97%AE%E9%A2%98/","path":"2024/12/03/mybatis映射mapper-xml文件不编译的问题/","title":"mybatis映射mapper.xml文件不编译的问题"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>mybatis映射mapper.xml文件不编译的问题 | Kim的博客</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Kim的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">他年我若为青帝，报与一处桃花开</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-question"><a href="/question/" rel="section"><i class="fa fa-question fa-fw"></i>question</a></li><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">1</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">27</span></a></li><li class="menu-item menu-item-schedule"><a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">16</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+      <div class="search-header">
+        <span class="search-icon">
+          <i class="fa fa-search"></i>
+        </span>
+        <div class="search-input-container">
+          <input autocomplete="off" autocapitalize="off" maxlength="80"
+                placeholder="搜索..." spellcheck="false"
+                type="search" class="search-input">
+        </div>
+        <span class="popup-btn-close" role="button">
+          <i class="fa fa-times-circle"></i>
+        </span>
+      </div>
+      <div class="search-result-container">
+        <div class="search-result-icon">
+          <i class="fa fa-spinner fa-pulse fa-5x"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Mybatis%E9%BB%98%E8%AE%A4%E4%B8%8D%E4%BC%9A%E6%98%A0%E5%B0%84src-main-java%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%8B%E9%9D%A2%E7%9A%84xml%E6%96%87%E4%BB%B6"><span class="nav-number">1.</span> <span class="nav-text">Mybatis默认不会映射src&#x2F;main&#x2F;java文件夹下面的xml文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E6%9E%9C%E4%B8%8D%E6%B7%BB%E5%8A%A0%E6%AD%A4%E8%8A%82%E7%82%B9-cn-edu-hbpu-mapper%E4%B8%8B%E7%9A%84mapper-xml%E6%96%87%E4%BB%B6%E9%83%BD%E4%BC%9A%E8%A2%AB%E6%BC%8F%E6%8E%89%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%E4%B8%8D%E4%BC%9A%E6%B7%BB%E5%8A%A0%E5%88%B0target%E4%B9%9F%E5%B0%B1%E6%98%AF%E6%9C%80%E7%BB%88%E7%9A%84%E7%9B%AE%E6%A0%87%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">如果不添加此节点,cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下的mapper.xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%E6%8E%89pom-xml%E4%B8%AD%E7%9A%84%E6%A0%87%E7%AD%BE%EF%BC%8C%E7%BB%93%E6%9E%9C%E5%A6%82%E4%B8%8B"><span class="nav-number">2.1.</span> <span class="nav-text">注释掉pom.xml中的标签，结果如下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A%E5%8F%96%E6%B6%88%E5%B0%B1%E4%BC%9A%E5%8A%A0%E8%BD%BD%E6%88%90%E5%8A%9F%EF%BC%8C%E5%A6%82%E4%B8%8B%EF%BC%9A"><span class="nav-number">2.2.</span> <span class="nav-text">注释取消就会加载成功，如下：</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yanxinlong"
+      src="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+  <p class="site-author-name" itemprop="name">yanxinlong</p>
+  <div class="site-description" itemprop="description">love what you do currently</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/crushyan" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;crushyan" rel="noopener me" target="_blank">GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/your-user-name" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;your-user-name" rel="noopener me" target="_blank">Twitter</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/03/mybatis%E6%98%A0%E5%B0%84mapper-xml%E6%96%87%E4%BB%B6%E4%B8%8D%E7%BC%96%E8%AF%91%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/%E4%B8%8B%E8%BD%BD.jpg">
+      <meta itemprop="name" content="yanxinlong">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kim的博客">
+      <meta itemprop="description" content="love what you do currently">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="mybatis映射mapper.xml文件不编译的问题 | Kim的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          mybatis映射mapper.xml文件不编译的问题
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-12-03 23:11:01 / 修改时间：23:29:54" itemprop="dateCreated datePublished" datetime="2024-12-03T23:11:01+08:00">2024-12-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/JAVA/" itemprop="url" rel="index"><span itemprop="name">JAVA</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h2 id="Mybatis默认不会映射src-main-java文件夹下面的xml文件"><a href="#Mybatis默认不会映射src-main-java文件夹下面的xml文件" class="headerlink" title="Mybatis默认不会映射src&#x2F;main&#x2F;java文件夹下面的xml文件"></a>Mybatis默认不会映射src&#x2F;main&#x2F;java文件夹下面的xml文件</h2><p>现在src&#x2F;resources&#x2F;下创建目录，记得创建时写cn&#x2F;edu&#x2F;hbpu&#x2F;mapper,最终显示是cn.edu.hbpu.mapper,但是如果创建目录时是cn.edu.hbpu.mapper<br>即使显示的都是cn.edu.hbpu.mapper,但在映射时还是可能出现问题,所以最好写cn&#x2F;edu&#x2F;hbpu&#x2F;mapper</p>
+<p>在这个目录（src&#x2F;resources&#x2F;cn&#x2F;edu&#x2F;hbpu&#x2F;mapper）下放xml文件<br><img src="/images/21.png" alt="图片"><br>在target文件夹中，如下：<br><img src="/images/19.png" alt="图片"></p>
+<p>但是这个是pom.xml下添加了resource设置的原因</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--         如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">resources</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/java<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.properties<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">resource</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">directory</span>&gt;</span>src/main/resources<span class="tag">&lt;/<span class="name">directory</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.properties<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*.xml<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">filtering</span>&gt;</span>false<span class="tag">&lt;/<span class="name">filtering</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resource</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">resources</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="如果不添加此节点-cn-edu-hbpu-mapper下的mapper-xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件"><a href="#如果不添加此节点-cn-edu-hbpu-mapper下的mapper-xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件" class="headerlink" title="如果不添加此节点,cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下的mapper.xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件"></a>如果不添加此节点,cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下的mapper.xml文件都会被漏掉，也就是说不会添加到target也就是最终的目标文件</h2><h3 id="注释掉pom-xml中的标签，结果如下"><a href="#注释掉pom-xml中的标签，结果如下" class="headerlink" title="注释掉pom.xml中的标签，结果如下"></a>注释掉pom.xml中的<resources>标签，结果如下</h3><p><img src="/images/20.png" alt="图片"><br><img src="/images/22.png" alt="图片"><br>可以看到src&#x2F;main&#x2F;java下的userMapper.xml并没有加载到target下</p>
+<h3 id="注释取消就会加载成功，如下："><a href="#注释取消就会加载成功，如下：" class="headerlink" title="注释取消就会加载成功，如下："></a>注释取消就会加载成功，如下：</h3><p><img src="/images/23.png" alt="图片"></p>
+<p>注意xml文件放在src&#x2F;resources&#x2F;cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下<br>还是放在src&#x2F;java&#x2F;cn&#x2F;edu&#x2F;hbpu&#x2F;mapper下是一样的</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2024/12/02/%E6%AE%B5%E6%8F%8F%E8%BF%B0%E7%AC%A6%E4%B8%AD%E7%9A%84Limit/" rel="prev" title="段描述符中的Limit">
+                  <i class="fa fa-angle-left"></i> 段描述符中的Limit
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2024/12/03/Mybatis%E6%98%A0%E5%B0%84%E9%97%AE%E9%A2%98/" rel="next" title="Mybatis映射问题">
+                  Mybatis映射问题 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">yanxinlong</span>
+  </div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
